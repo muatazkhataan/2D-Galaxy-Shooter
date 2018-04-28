@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour {
 
-    public float speed = 10.0f;
+    [SerializeField]
+    private float _speed = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class Laser : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // Move up at 10 speed
-        transform.Translate(Vector3.up * speed * Time.deltaTime);
+        transform.Translate(Vector3.up * _speed * Time.deltaTime);
 
         // If position of the y of my laser is greater than or equal to 6
         // Destroy the laser

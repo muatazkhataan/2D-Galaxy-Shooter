@@ -198,7 +198,7 @@ Transform:
   m_Children:
   - {fileID: 1155292338}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978043847
 GameObject:
@@ -228,9 +228,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9bbc2dcffa3b04cb69e0e5c9174168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserPrefab: {fileID: 1107231690150320, guid: 6ef9998d544c36e48822242e9c199dd9,
+  _canTripleShot: 1
+  _laserPrefab: {fileID: 1107231690150320, guid: 6ef9998d544c36e48822242e9c199dd9,
     type: 2}
-  speed: 5
+  _tripleShotPrefab: {fileID: 1608508829129700, guid: 1fced5044f0c1cc40a892b2ba7a8b82d,
+    type: 2}
+  _fireRate: 0.25
+  _canFire: 0
+  _speed: 5
+  _mouseSpeed: 15
 --- !u!212 &978043849
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -262,8 +268,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1257592977
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1b4a8fdd39d3a45d0a9ee484ad6800ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -286,7 +292,7 @@ Transform:
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092188385
 GameObject:
@@ -299,6 +305,7 @@ GameObject:
   - component: {fileID: 1092188388}
   - component: {fileID: 1092188387}
   - component: {fileID: 1092188386}
+  - component: {fileID: 1092188390}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -369,6 +376,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1092188390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1092188385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a11618081ec68439df13fa6e974647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1155292337
 GameObject:
   m_ObjectHideFlags: 0
